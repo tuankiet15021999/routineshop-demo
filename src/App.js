@@ -4,7 +4,8 @@ import Home from './pages/Home/Home'
 import Header from './pages/Header/Header'
 import Footer from './pages/Footer/Footer'
 import Products from './pages/Products/Products'
-import Test from './helpers/components/Navbar'
+import DetailProduct from './pages/DetailProduct/DetailProduct'
+import Login from './pages/Login/Login'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 function App() {
@@ -22,8 +23,11 @@ function App() {
             <Route path="/products">
               <Products/>
             </Route>
-            <Route path="/test">
-              <Test/>
+            <Route path="/product/:id">
+              <DetailProduct/>
+            </Route>
+            <Route path="/login">
+              <Login/>
             </Route>
           </Switch>
           <Footer/>

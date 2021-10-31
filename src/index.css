@@ -14,6 +14,27 @@ code {
 .relative{
   position: relative;
 }
+.flex-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-basic{
+  display: inline-block;
+  padding: 5px;
+  background: brown;
+  border: 2px solid brown;
+  color: white;
+  width: 150px;
+  box-shadow: inset 0 0 0 0 brown;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+.btn-basic:hover{
+  box-shadow: inset 200px 0 0 0 white;
+  color: brown;
+}
 a, a:hover {
   text-decoration: none;
 }
@@ -471,6 +492,106 @@ li{
     padding: 0px 5px 0px 5px;
 }
 /* --------------------- */
+/* -------Detail Product------- */
+.detail-img-div{
+  overflow-x: hidden;
+  margin-bottom: 10rem;
+}
+.detail-img-div>img{
+  width: 100%;
+}
+.detail-product-div>div{
+  margin-bottom: 10px;
+}
+.title-detai-product-div{
+  font-size: 2rem;
+}
+.price-detai-product-div{
+    color: brown;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.select-color-product>button{
+  border: none;
+  background-color: transparent;
+  width: 50px;
+  margin-right: 10px;
+}
+.select-color-product>button>img{
+  border: 0.5px dashed darkgray;
+}
+.select-size-product{
+  display: flex;
+}
+.select-size-product>button {
+  border: 1px dashed darkgray;
+  padding: 10px;
+  background-color: transparent;
+  margin-right: 10px;
+  display: flex;
+  width: 44px;
+  justify-content: center;
+}
+.btn-add-cart{
+  width: 200px;
+}
+/* --------LOGIN------- */
+.title-login{
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: inherit;
+}
+.login-form{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.login-form>div{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+input.account,input.password {
+  width: 400px;
+  display: flex;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.btn-forgot-password{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+.cross-line{
+  border-left: 1px solid darkgrey;
+}
+.btn-login-fb{
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  width: 250px;
+  background: #3B5998;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+}
+.btn-login-gmail{
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  width: 250px;
+  background: #dd4b39;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+}
+/* ------------- */
+/* --------------------- */
 /* ------Footer------ */
 .parallax {
   background-image: url(https://routine.vn/media/wysiwyg/slider/NAM-1.jpg);
@@ -597,8 +718,14 @@ li{
   .btn-xemthem{
     width: 10rem;
   }
+  .detail-img-div{
+    height: 80vh;
+    margin-bottom: 1rem;
+  }
+  .cross-line{
+    border: none;
+  }
 }
-
 /* ------ */
 /* ----- */
 

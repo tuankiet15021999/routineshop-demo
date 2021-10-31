@@ -28,7 +28,7 @@ const Navbar = () =>{
                     <div className="col-4 col-md-4 login-mobile-div">
                         <div className="row">
                             <div className="col-6 col-md-6">
-                                <Link to="#" className="login-mobile-btn"><FaIcons.FaUser size={25}/></Link>
+                                <Link to="/login" className="login-mobile-btn"><FaIcons.FaUser size={25}/></Link>
                             </div>
                             <div className="col-6 col-md-6 relative">
                                 <AiIcons.AiOutlineShoppingCart size={25}/>

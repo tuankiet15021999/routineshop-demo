@@ -68,7 +68,7 @@ const Header = () =>{
                                 </div>
                                 <div className="col-lg-4">
                                     <div className="login-div">
-                                        <Link to="">ĐĂNG NHẬP</Link>
+                                        <Link to="/login">ĐĂNG NHẬP</Link>
                                     </div>
                                 </div>
                                 <div className="col-lg-4">
