@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/deploy-github/static/css/main.bba0e187.chunk.css",
-    "main.js": "/deploy-github/static/js/main.420036a0.chunk.js",
-    "main.js.map": "/deploy-github/static/js/main.420036a0.chunk.js.map",
-    "runtime-main.js": "/deploy-github/static/js/runtime-main.0b7694c5.js",
-    "runtime-main.js.map": "/deploy-github/static/js/runtime-main.0b7694c5.js.map",
-    "static/js/2.3018ad15.chunk.js": "/deploy-github/static/js/2.3018ad15.chunk.js",
-    "static/js/2.3018ad15.chunk.js.map": "/deploy-github/static/js/2.3018ad15.chunk.js.map",
-    "static/js/3.521eb487.chunk.js": "/deploy-github/static/js/3.521eb487.chunk.js",
-    "static/js/3.521eb487.chunk.js.map": "/deploy-github/static/js/3.521eb487.chunk.js.map",
-    "index.html": "/deploy-github/index.html",
-    "static/css/main.bba0e187.chunk.css.map": "/deploy-github/static/css/main.bba0e187.chunk.css.map",
-    "static/js/2.3018ad15.chunk.js.LICENSE.txt": "/deploy-github/static/js/2.3018ad15.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/deploy-github/static/media/logo.6ce24c58.svg"
+    "main.css": "/routineshop-demo/static/css/main.bba0e187.chunk.css",
+    "main.js": "/routineshop-demo/static/js/main.420036a0.chunk.js",
+    "main.js.map": "/routineshop-demo/static/js/main.420036a0.chunk.js.map",
+    "runtime-main.js": "/routineshop-demo/static/js/runtime-main.4e27f045.js",
+    "runtime-main.js.map": "/routineshop-demo/static/js/runtime-main.4e27f045.js.map",
+    "static/js/2.3018ad15.chunk.js": "/routineshop-demo/static/js/2.3018ad15.chunk.js",
+    "static/js/2.3018ad15.chunk.js.map": "/routineshop-demo/static/js/2.3018ad15.chunk.js.map",
+    "static/js/3.521eb487.chunk.js": "/routineshop-demo/static/js/3.521eb487.chunk.js",
+    "static/js/3.521eb487.chunk.js.map": "/routineshop-demo/static/js/3.521eb487.chunk.js.map",
+    "index.html": "/routineshop-demo/index.html",
+    "static/css/main.bba0e187.chunk.css.map": "/routineshop-demo/static/css/main.bba0e187.chunk.css.map",
+    "static/js/2.3018ad15.chunk.js.LICENSE.txt": "/routineshop-demo/static/js/2.3018ad15.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/routineshop-demo/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0b7694c5.js",
+    "static/js/runtime-main.4e27f045.js",
     "static/js/2.3018ad15.chunk.js",
     "static/css/main.bba0e187.chunk.css",
     "static/js/main.420036a0.chunk.js"
