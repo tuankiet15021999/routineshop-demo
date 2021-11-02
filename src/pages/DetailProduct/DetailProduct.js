@@ -4,7 +4,6 @@ import {useParams} from 'react-router'
 const DetailProduct = () =>{
     const [product,setProduct] = useState()
     const {id} = useParams()
-    console.log("id",id);
     async function requestProductById(id){
         const response = await fetch('https://fakestoreapi.com/products/'+id,{
             method:'GET',
@@ -13,7 +12,6 @@ const DetailProduct = () =>{
             }
         })
         const data = await response.json()
-        console.log(data);
         setProduct(data)
     } 
     useEffect(()=>{

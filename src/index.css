@@ -594,6 +594,10 @@ input.account,input.password {
   color: white;
   margin-top: 20px;
 }
+.message-error{
+  color:brown;
+  font-weight: 600;
+}
 /* ------------- */
 /* --------------------- */
 /* ------Footer------ */

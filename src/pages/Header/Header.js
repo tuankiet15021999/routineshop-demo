@@ -63,7 +63,7 @@ const Header = () =>{
                                 <div className="col-lg-4">
                                     <form className="search-form">
                                         <input className="form-control input-search" type="text"  placeholder="TÌM KIẾM"/>
-                                        <button class="btn btn-danger" type="button" style={{display:"none"}}></button>
+                                        <button className="btn btn-danger" type="button" style={{display:"none"}}></button>
                                     </form>
                                 </div>
                                 <div className="col-lg-4">

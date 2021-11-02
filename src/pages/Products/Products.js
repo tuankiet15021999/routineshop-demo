@@ -16,7 +16,6 @@ const Products = () =>{
     useEffect(()=>{
         requestProducts()
     },[])
-    console.log("products",products);
     return (
         <div>
             <div className="small-container">
@@ -24,7 +23,7 @@ const Products = () =>{
                     <div className="col-lg-4">
                         <nav aria-label="breadcrumb">
                             <ul className="breadcrumb">
-                                <li className="breadcrumb-item"><Link to="/product/1">TRANG CHỦ</Link></li>
+                                <li className="breadcrumb-item"><Link to="/home">TRANG CHỦ</Link></li>
                                 <li className="breadcrumb-item active" aria-current="page">THỜI TRANG NAM</li>
                             </ul>
                         </nav>
@@ -71,14 +70,14 @@ const Products = () =>{
             </div>
             <div className="pagination-div">
                 <div className="pagination">
-                    <Link to="/product/1">&laquo;</Link>
-                    <Link to="/product/1">1</Link>
-                    <Link to="/product/1">2</Link>
-                    <Link to="/product/1">3</Link>
-                    <Link to="/product/1">4</Link>
-                    <Link to="/product/1">5</Link>
-                    <Link to="/product/1">6</Link>
-                    <Link to="/product/1">&raquo;</Link>
+                    <Link to="/home">&laquo;</Link>
+                    <Link to="/home">1</Link>
+                    <Link to="/home">2</Link>
+                    <Link to="/home">3</Link>
+                    <Link to="/home">4</Link>
+                    <Link to="/home">5</Link>
+                    <Link to="/home">6</Link>
+                    <Link to="/home">&raquo;</Link>
                 </div>
             </div>
         </div>

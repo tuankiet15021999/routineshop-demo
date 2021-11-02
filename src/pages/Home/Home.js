@@ -1,5 +1,6 @@
 import React,{useState,useEffect}  from 'react'
 import {Link,Redirect} from 'react-router-dom'
+import Loading from '../../helpers/components/Loading'
 const Home = () =>{
     const [products,setProducts] = useState()
     async function requestProductsLimit(limit){
@@ -15,7 +16,6 @@ const Home = () =>{
     useEffect(()=>{
         requestProductsLimit(4)
     },[])
-    console.log(products);
     return (
         <div>
             <div className="relative">
@@ -41,12 +41,13 @@ const Home = () =>{
             <div className="container">
             <div className="title-tabs">
                 <h2 className="h2-title"><i className="fa fa-star star" aria-hidden="true"></i></h2>
-                <ul class="nav nav-tabs" role="tablist">
+                <ul className="nav nav-tabs" role="tablist">
                     <li className="tag-tabs" role="presentation"><Link to="" aria-controls="messages" role="tab" data-toggle="tab">THỜI TRANG</Link></li>
                     <li className="tag-tabs" role="presentation"><Link to="" aria-controls="messages2" role="tab" data-toggle="tab">PHỤ KIỆN</Link></li>
 				</ul>
             </div>
         </div>
+            <Loading display={products ? "display-none" : ""}></Loading>
             <div className="container">
                 <div className="tab-content">
                     <div className="thumbnail">
@@ -83,16 +84,16 @@ const Home = () =>{
             </div>
             <div className="container">
                 <div className="hot-items">
-                    <div class="owl-carousel owl-theme">
-                        <div class="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_1.png?1628829517964" alt="image" /> </div>
-                        <div class="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_4.png?1628829517964" alt="image" /> </div>
-                        <div class="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_3.png?1628829517964" alt="image" /> </div>
-                        <div class="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_1.png?1628829517964" alt="image" /> </div>
-                        <div class="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_4.png?1628829517964" alt="image" /> </div>
-                        <div class="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_3.png?1628829517964" alt="image" /> </div>
-                        <div class="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_1.png?1628829517964" alt="image" /> </div>
-                        <div class="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_4.png?1628829517964" alt="image" /> </div>
-                        <div class="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_3.png?1628829517964" alt="image" /> </div>
+                    <div className="owl-carousel owl-theme">
+                        <div className="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_1.png?1628829517964" alt="image" /> </div>
+                        <div className="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_4.png?1628829517964" alt="image" /> </div>
+                        <div className="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_3.png?1628829517964" alt="image" /> </div>
+                        <div className="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_1.png?1628829517964" alt="image" /> </div>
+                        <div className="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_4.png?1628829517964" alt="image" /> </div>
+                        <div className="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_3.png?1628829517964" alt="image" /> </div>
+                        <div className="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_1.png?1628829517964" alt="image" /> </div>
+                        <div className="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_4.png?1628829517964" alt="image" /> </div>
+                        <div className="item"> <img src="//bizweb.dktcdn.net/100/113/556/themes/161811/assets/brand_3.png?1628829517964" alt="image" /> </div>
                     </div>
                 </div>
             </div>      
