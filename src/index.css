@@ -447,11 +447,12 @@ li{
   justify-content: center;
 }
 .products-list>li{
-  padding: 5px;
+  padding: 20px;
   margin-bottom: 110px;
 }
 .products-list>li>div>a>img {
   height: 520px;
+  width: 400px;
 }
 .title-product{
   display: block;

@@ -1,6 +1,21 @@
-import React from 'react'
+import React,{useState,useEffect}  from 'react'
 import {Link,Redirect} from 'react-router-dom'
 const Home = () =>{
+    const [products,setProducts] = useState()
+    async function requestProductsLimit(limit){
+        const response = await fetch('https://fakestoreapi.com/products?limit='+limit,{
+            method:'GET',
+            headers:{
+                'Content-Type': 'application/json',
+            },
+        })
+        const data = await response.json()
+        setProducts(data)
+    }
+    useEffect(()=>{
+        requestProductsLimit(4)
+    },[])
+    console.log(products);
     return (
         <div>
             <div className="relative">
@@ -36,94 +51,32 @@ const Home = () =>{
                 <div className="tab-content">
                     <div className="thumbnail">
                         <div className="row"> 
-                            <div className="col-lg-3 tab-items">
+                            {products?.map((item,index)=>{
+                                return(
+                                <div key={index} className="col-lg-3 tab-items">
                                 <div className="box">
                                     <div className="box-inner">
                                         <div className="face">
-                                            <img src="https://routine.vn/media/catalog/product/cache/e78fcb931fd36e972f6051c94f188557/1/0/10f21jac001-brown-1_1.jpg"></img>
+                                            <img src={item?.image}></img>
                                             
                                         </div>
                                         <div className="back">
-                                            <img src="https://routine.vn/media/catalog/product/cache/e78fcb931fd36e972f6051c94f188557/1/0/10f21jac001-brown-3_1.jpg"></img>
+                                            <img src={item?.image}></img>
                                         </div>
                                     </div>
                                     <div className="opa-back">
                                     </div>
                                     <div className="detail">
                                         <div className="equal-detail">
-                                            <span className="name-pro-home">ÁO KHOÁC BOMBER QUILTING TAY CONG.REGULAR - 10F21JAC001</span>
-                                            <span className="price-name-home">1.203.489đ</span>
-                                            <span className="pay-home-div"><Link to="" className="btn-pay-home">Mua hàng</Link></span>
+                                            <span className="name-pro-home">{item?.title}</span>
+                                            <span className="price-name-home">{item?.price}</span>
+                                            <span className="pay-home-div"><Link to={'/product/'+item?.id} className="btn-pay-home">Mua hàng</Link></span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>  
-                            <div className="col-lg-3 tab-items">
-                                <div className="box">
-                                    <div className="box-inner">
-                                        <div className="face">
-                                            <img src="https://routine.vn/media/catalog/product/cache/e78fcb931fd36e972f6051c94f188557/1/0/10f20dpaw002.1_2.jpg"></img>
-                                            
-                                        </div>
-                                        <div className="back">
-                                            <img src="https://routine.vn/media/catalog/product/cache/e78fcb931fd36e972f6051c94f188557/1/0/10f20dpaw002.4_1.jpg"></img>
-                                        </div>
-                                    </div>
-                                    <div className="opa-back">
-                                    </div>
-                                    <div className="detail">
-                                        <div className="equal-detail">
-                                            <span className="name-pro-home">ÁO KHOÁC BOMBER QUILTING TAY CONG.REGULAR - 10F21JAC001</span>
-                                            <span className="price-name-home">1.203.489đ</span>
-                                            <span className="pay-home-div"><Link to="" className="btn-pay-home">Mua hàng</Link></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 tab-items">
-                                <div className="box">
-                                    <div className="box-inner">
-                                        <div className="face">
-                                            <img src="https://routine.vn/media/catalog/product/cache/e78fcb931fd36e972f6051c94f188557/d/s/dsc01165_8.jpg"></img>
-                                            
-                                        </div>
-                                        <div className="back">
-                                            <img src="https://routine.vn/media/catalog/product/cache/e78fcb931fd36e972f6051c94f188557/d/s/dsc01174_6.jpg"></img>
-                                        </div>
-                                    </div>
-                                    <div className="opa-back">
-                                    </div>
-                                    <div className="detail">
-                                        <div className="equal-detail">
-                                            <span className="name-pro-home">SET LEISUREWEAR - KLG - FEATHER GRAY</span>
-                                            <span className="price-name-home">700.000đ</span>
-                                            <span className="pay-home-div"><Link to="" className="btn-pay-home">Mua hàng</Link></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 tab-items">
-                                <div className="box">
-                                    <div className="box-inner">
-                                        <div className="face">
-                                            <img src="https://routine.vn/media/catalog/product/cache/e78fcb931fd36e972f6051c94f188557/d/s/dsc01394_8.jpg"></img>
-                                            
-                                        </div>
-                                        <div className="back">
-                                            <img src="https://routine.vn/media/catalog/product/cache/e78fcb931fd36e972f6051c94f188557/d/s/dsc01384_2.jpg"></img>
-                                        </div>
-                                    </div>
-                                    <div className="opa-back">
-                                    </div>
-                                    <div className="detail">
-                                        <div className="equal-detail">
-                                            <span className="name-pro-home">SET LEISUREWEAR - KLG - BLACK</span>
-                                            <span className="price-name-home">700.000đ</span>
-                                            <span className="pay-home-div"><Link to="" className="btn-pay-home">Mua hàng</Link></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                </div>  
+                                )
+                            })}
                         </div>
                     </div>
                 </div>
