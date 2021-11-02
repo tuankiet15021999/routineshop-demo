@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import Loading from '../../helpers/components/Loading'
 const Products = () =>{
     const [products,setProducts] = useState()
     async function requestProducts(){
@@ -15,7 +16,7 @@ const Products = () =>{
     useEffect(()=>{
         requestProducts()
     },[])
-    console.log("data",products);
+    console.log("products",products);
     return (
         <div>
             <div className="small-container">
@@ -43,6 +44,7 @@ const Products = () =>{
                     </div>
                 </div>
             </div>
+            <Loading display={products ? "display-none" : ""}></Loading>
             <div className="small-container">
                 <div className="products-list-div">
                     <ul className="products-list">
