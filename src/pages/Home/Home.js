@@ -20,7 +20,7 @@ const Home = () =>{
         <div>
             <div className="relative">
                 <Link className="btn-xemthem" to="/products">XEM THÊM</Link>
-                <img src="https://routine.vn/media/wysiwyg/slider/NAM_-_DESKTOP.jpg" className="caro d-block w-100" alt="..."/>
+                <img src="https://sss-dashboard.leanservices.work/upload/11-2021/1636339479194.jpeg" className="caro d-block w-100" alt="..."/>
             </div>
             <div className="container">
                 <div className="row" id="qc"> 
